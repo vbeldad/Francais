@@ -1833,6 +1833,200 @@
           ] },
     ]},
     ];
+    // ----- Compréhension orale (transcriptions) -----
+    const ask = (say, q, a, opts) => ({ say, q, a, opts });
+    const VF = ["Vrai","Faux"];
+    const EXTRA = {
+    U1: [
+        { title: "🎧 Le tourisme de ruines (piste 2)", instr: "🔊 Écoutez chaque personne : est-elle pour ou contre l'urbex ?", type: "choice", shuffle: true, opts: ["Pour l'urbex","Contre l'urbex"],
+          items: [
+            ask("Personnellement, je ne vois vraiment aucun intérêt ni aucune beauté à visiter des villes ou des lieux laissés à l'abandon. Je suis allé à Détroit par curiosité, et j'ai trouvé que cette ville était tout simplement laide.", "Luc", "Contre l'urbex"),
+            ask("J'ai eu l'occasion de visiter un village fantôme au Québec, et j'ai trouvé que c'était une expérience exceptionnelle. Pour moi, cet endroit est splendide.", "Paméla", "Pour l'urbex"),
+            ask("Moi, je suis fasciné par les villes fantômes. Alors, je suis allé à Prypiat. J'ai trouvé que les lieux et l'atmosphère étaient d'une grande poésie.", "Boris", "Pour l'urbex"),
+            ask("Je suis tout à fait contre le tourisme de ruines ! Je considère cette mode de l'urbex comme une forme de voyeurisme. C'est indécent !", "Astrid", "Contre l'urbex"),
+          ] },
+        { title: "🎧 La gentrification (piste 3)", instr: "🔊 Écoutez la chronique et répondez.", type: "choice",
+          items: [
+            ask("C'est en 1960 que ce terme voit le jour. On le doit à une sociologue britannique d'origine allemande, Ruth Glass.", "Quand le mot gentrification est-il né ?", "en 1960", ["en 1960","en 1990","en 2006"]),
+            ask("Mais qu'est-ce que la gentrification exactement ? C'est simplement quand un quartier populaire devient progressivement plus bourgeois.", "Qu'est-ce que la gentrification ?", "un quartier populaire qui devient plus bourgeois", ["un quartier populaire qui devient plus bourgeois","la construction de gratte-ciel","l'exode rural"]),
+            ask("Dans cette brasserie, un simple menu coûte environ 20 à 30 euros, alors que dans les petits restaurants du quartier, on peut manger pour 10 à 12 euros.", "Combien coûte un menu à la Brasserie Barbès ?", "20 à 30 euros", ["10 à 12 euros","20 à 30 euros","50 euros"]),
+            ask("En région parisienne, les villes comme Pantin et Montreuil sont aujourd'hui concernées.", "Quelles villes de la région parisienne sont concernées ?", "Pantin et Montreuil", ["Pantin et Montreuil","Lyon et Lille","Barnsbury et Soho"]),
+            ask("Et aujourd'hui, un nouveau phénomène apparaît : la gentrification des zones rurales. Depuis la crise sanitaire, beaucoup de Parisiens rêvent d'acheter une maison secondaire à la campagne.", "Quel nouveau phénomène apparaît ?", "la gentrification des zones rurales", ["la gentrification des zones rurales","la disparition des villes","le retour des usines"]),
+          ] },
+        { title: "🎧 La ville de demain (pistes 5 et 6)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("Selon l'ONU, 68 % de la population mondiale vivra en zone urbaine d'ici 2050.", "Quel pourcentage de la population vivra en ville en 2050 ?", "68 %", ["50 %","68 %","80 %"]),
+            ask("Cette évolution crée des mégapoles, c'est-à-dire des villes de plus de 10 millions d'habitants. Selon l'ONU, elles seront 43 en 2050.", "Qu'est-ce qu'une mégapole ?", "une ville de plus de 10 millions d'habitants", ["une ville de plus de 10 millions d'habitants","une ville de plus d'un million d'habitants","une capitale"]),
+            ask("Par exemple, Tokyo est aujourd'hui la plus grande mégapole du monde avec 37 millions d'habitants.", "Quelle est la plus grande mégapole du monde ?", "Tokyo", ["Tokyo","Lagos","New York"]),
+            ask("Pour favoriser le développement durable, les villes doivent agir dans trois domaines prioritaires : les transports, l'environnement et l'énergie.", "Les trois domaines prioritaires sont…", "les transports, l'environnement et l'énergie", ["les transports, l'environnement et l'énergie","le logement, la santé et l'école","le tourisme, le commerce et la culture"]),
+            ask("Ne ratez pas l'inauguration, demain, de votre nouvelle place de la Liberté ! Un espace entièrement piétonnisé. Rejoignez-nous dès 10 h.", "À quelle heure commence l'inauguration de la place de la Liberté ?", "à 10 h", ["à 10 h","à 15 h","à 20 h"]),
+          ] },
+    ],
+    U2: [
+        { title: "🎧 Le riz à Madagascar (piste 12)", instr: "🔊 Écoutez la chronique et répondez.", type: "choice",
+          items: [
+            ask("Le riz est l'aliment de base des Malgaches et sa culture représente environ 80 % de la production agricole.", "Le riz représente quelle part de la production agricole ?", "environ 80 %", ["environ 30 %","environ 50 %","environ 80 %"]),
+            ask("La deuxième conséquence est qu'ils perdent une partie de leur récolte, entre 30 et 50 %, parce qu'ils n'ont pas de lieu de stockage.", "Quelle part de la récolte est perdue ?", "entre 30 et 50 %", ["moins de 10 %","entre 30 et 50 %","toute la récolte"]),
+            ask("Pour tenter de régler le problème, deux étudiants ingénieurs de Lyon ont imaginé un sac écologique innovant qui permet de conserver le riz pendant douze mois.", "Combien de temps le sac permet-il de conserver le riz ?", "douze mois", ["un mois","six mois","douze mois"]),
+          ] },
+        { title: "🎧 Étienne, agri youtubeur (piste 13)", instr: "🔊 Écoutez le reportage. Vrai ou faux ?", type: "choice", opts: VF,
+          items: [
+            ask("Cet éleveur de vaches laitières a créé sa chaîne YouTube il y a deux ans.", "Étienne est éleveur de vaches laitières.", "Vrai"),
+            ask("Chaque semaine, il montre à travers ses vidéos la réalité de son travail, une façon de répondre à ce qu'il appelle l'agribashing.", "Il veut répondre aux critiques injustes contre les agriculteurs.", "Vrai"),
+            ask("Étienne Fourmont lui aussi fait du clic avec ses vidéos : 30 000 vues en moyenne.", "Ses vidéos font 3 000 vues en moyenne.", "Faux"),
+            ask("Son père, Roger, quatrième génération d'éleveurs, soutient son fils dans sa démarche.", "Son père est contre ses vidéos.", "Faux"),
+          ] },
+        { title: "🎧 Les maires contre les pesticides (piste 14)", instr: "🔊 Écoutez la chronique et répondez.", type: "choice",
+          items: [
+            ask("Le maire a pris la décision d'interdire l'utilisation des pesticides à moins de 150 mètres des habitations.", "À quelle distance des habitations le maire a-t-il interdit les pesticides ?", "150 mètres", ["50 mètres","150 mètres","1 kilomètre"]),
+            ask("L'une des analyses avait révélé un taux de pesticides 30 fois supérieur à la dose réglementaire chez un enfant de six ans !", "Combien de fois la dose réglementaire chez un enfant ?", "30 fois", ["3 fois","10 fois","30 fois"]),
+            ask("Le problème, c'est qu'en France, les maires ne sont pas légalement autorisés à interdire les pesticides, c'est l'État qui s'en charge au niveau national.", "Qui peut interdire les pesticides en France ?", "l'État", ["les maires","l'État","les agriculteurs"]),
+            ask("Ainsi, au total, 60 maires ont pris des mesures pour encadrer, voire interdire, l'usage des pesticides.", "Combien de maires ont pris des mesures ?", "60", ["6","60","600"]),
+          ] },
+        { title: "🎧 Le kilomètre alimentaire (piste 16)", instr: "🔊 Écoutez la chronique et répondez.", type: "choice",
+          items: [
+            ask("Ce fruit est cultivé dans le sud-ouest de la France, dans les Landes et le Tarn-et-Garonne. Mais une partie de cette récolte est exportée en Italie où les fruits sont triés, calibrés et emballés.", "Où sont envoyés les kiwis français ?", "en Italie", ["en Espagne","en Italie","en Asie"]),
+            ask("Ces kiwis français parcourent tout de même plus de 2 000 kilomètres !", "Combien de kilomètres parcourent ces kiwis ?", "plus de 2 000", ["200","plus de 2 000","20 000"]),
+            ask("Parce que les usines italiennes sont performantes et surtout, les coûts de la main-d'œuvre en Italie sont plus bas qu'en France.", "Pourquoi ce détour par l'Italie ?", "la main-d'œuvre y coûte moins cher", ["la main-d'œuvre y coûte moins cher","les kiwis y sont meilleurs","c'est obligatoire"]),
+            ask("Le thon rouge peut parcourir jusqu'à 20 000 kilomètres entre son lieu de pêche et sa mise en rayon.", "Combien de kilomètres peut parcourir le thon rouge ?", "jusqu'à 20 000", ["2 000","jusqu'à 20 000","200 000"]),
+          ] },
+        { title: "🎧 Fait maison et Brachoua (pistes 17 et 18)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("Il faut que les plats soient entièrement élaborés dans les locaux du restaurant, au moment de la commande et à condition qu'ils soient cuisinés avec des produits bruts.", "Le label « fait maison » garantit que les plats sont…", "cuisinés sur place avec des produits bruts", ["cuisinés sur place avec des produits bruts","bio","livrés à domicile"]),
+            ask("Bon, on se rejoint au resto à 20 h, ça te convient ? Ça s'appelle Chez Marcus.", "Comment s'appelle le restaurant ?", "Chez Marcus", ["Chez Marcus","Chez Hélène","Le Breton"]),
+            ask("Situé dans les montagnes, à 50 km au sud-est de Rabat, Brachoua a longtemps été considéré comme un village sinistré, sans eau ni électricité.", "Où se trouve Brachoua ?", "à 50 km de Rabat", ["à 50 km de Rabat","près de Marrakech","au bord de la mer"]),
+            ask("Ses habitants se sont regroupés au sein de l'association Agriculteur Moderne.", "Grâce à quelle technique le village est devenu autonome ?", "la permaculture", ["la permaculture","l'agriculture intensive","la pêche"]),
+          ] },
+    ],
+    U3: [
+        { title: "🎧 Le partenaire idéal (piste 24)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("L'enquête a été menée auprès de plus de 3 000 participants et participantes.", "Combien de personnes ont participé à l'étude ?", "plus de 3 000", ["300","plus de 3 000","30 000"]),
+            ask("L'homme français idéal doit avoir une pilosité faciale, un peu de rides au coin des yeux, les « yeux bruns doux » et des cheveux foncés.", "L'homme français idéal a…", "une barbe, quelques rides et les yeux bruns", ["une barbe, quelques rides et les yeux bruns","les yeux bleus et les cheveux blonds","des tatouages"]),
+            ask("Pour les Françaises, les principales caractéristiques citées sont les cheveux blond clair avec une frange, les traits doux du visage, de grandes lèvres et de grands yeux bleus.", "La femme idéale pour les Français a…", "les cheveux blond clair et les yeux bleus", ["les cheveux blond clair et les yeux bleus","les cheveux bruns et des piercings","des taches de rousseur"]),
+            ask("Le sens de l'humour est le trait de personnalité le plus recherché par les partenaires du monde entier.", "Le trait de personnalité le plus recherché :", "le sens de l'humour", ["l'intelligence","le sens de l'humour","la proactivité"]),
+            ask("L'intelligence, naturelle, pas artificielle, se classe en troisième position.", "Où se classe l'intelligence ?", "en troisième position", ["en première position","en deuxième position","en troisième position"]),
+          ] },
+        { title: "🎧 Course et Sephora Kids (pistes 27 et 28)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("Seulement 5 km ! C'est ma première, je ne suis même pas sûre d'arriver au bout.", "Combien de kilomètres fera-t-elle à sa première course ?", "5 km", ["5 km","10 km","un marathon"]),
+            ask("Moi je retournerai courir quand mon fils aura grandi.", "Quand son amie retournera-t-elle courir ?", "quand son fils aura grandi", ["samedi","quand son fils aura grandi","jamais"]),
+            ask("Ces filles sont en réalité des… fillettes. Elles ont entre 9 et 13 ans et elles veulent déjà rajeunir !", "Quel âge ont les Sephora Kids ?", "entre 9 et 13 ans", ["entre 9 et 13 ans","entre 15 et 18 ans","moins de 5 ans"]),
+            ask("Ces produits destinés aux adultes contiennent des composants qui irritent la peau des enfants, tels que le rétinol.", "Quel composant irrite la peau des enfants ?", "le rétinol", ["le rétinol","l'eau","le savon"]),
+          ] },
+    ],
+    U4: [
+        { title: "🎧 Les étapes de l'amour (piste 35)", instr: "🔊 Écoutez chaque témoignage et choisissez l'étape.", type: "choice", shuffle: true, opts: ["le coup de foudre","la passion","la demande en mariage","l'amour durable et tendre","la rupture"],
+          items: [
+            ask("Nous étions en crise. Le soir où elle m'a plaqué, je suis resté sur le canapé, incapable de bouger. J'avais le cœur en miettes.", "Personne 1", "la rupture"),
+            ask("Pour son anniversaire, je lui ai offert un saut en parachute. Et une fois de retour sur terre, je lui ai demandé sa main.", "Personne 2", "la demande en mariage"),
+            ask("Nous étions inséparables. Je l'aimais à la folie. C'était un amour intense, démesuré et passionné.", "Personne 3", "la passion"),
+            ask("Quand tout à coup, nos regards se sont croisés… Tout a disparu autour de moi. Le temps s'est arrêté.", "Personne 4", "le coup de foudre"),
+            ask("Les passions des débuts ont laissé place à une tendresse profonde. J'ai senti que j'avais trouvé un compagnon de vie.", "Personne 5", "l'amour durable et tendre"),
+          ] },
+        { title: "🎧 La wedding planner (piste 34)", instr: "🔊 Écoutez l'interview et répondez.", type: "choice",
+          items: [
+            ask("Marie, vous êtes wedding planner et vous exercez ce travail à Lille et dans sa région depuis 2022.", "Où travaille Marie Duval ?", "à Lille", ["à Paris","à Lille","à Toulouse"]),
+            ask("Oui, le maître-mot, c'est l'équilibre !", "Quel est son maître-mot ?", "l'équilibre", ["la créativité","l'équilibre","le budget"]),
+            ask("C'est pour cela que je commence toujours par un rendez-vous découverte durant lequel je pose beaucoup de questions aux mariés.", "Par quoi commence-t-elle toujours ?", "un rendez-vous découverte", ["un rendez-vous découverte","le choix du menu","la réservation de la salle"]),
+            ask("Avant, c'étaient principalement les mariées qui organisaient tout. C'était une charge mentale considérable.", "Selon Clarisse Aubry, avant, qui organisait tout ?", "les mariées", ["les mariées","les parents","les témoins"]),
+          ] },
+        { title: "🎧 Les amitiés insolites (piste 38)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("Je voudrais vous parler de Mio, mon chien. Quand ma meilleure amie m'a offert cette petite boule de poils il y a cinq ans…", "Qui est Mio ?", "le chien de Marine", ["le chien de Marine","l'ex de Marine","un épicier"]),
+            ask("Je venais de me séparer après sept ans de vie de couple et j'avais besoin de soutien et de réconfort.", "Après combien d'années de couple Marine s'est-elle séparée ?", "sept ans", ["cinq ans","sept ans","dix ans"]),
+            ask("Si un jour on m'avait dit que je deviendrais ami avec l'épicier du coin, je ne l'aurais pas cru… Omar, il a l'âge d'être mon grand-père.", "Qui est Omar ?", "l'épicier du coin, qui pourrait être son grand-père", ["l'épicier du coin, qui pourrait être son grand-père","son collègue","son frère"]),
+            ask("Elle s'appelle Tatiana, mais on l'appelle Tina, c'est mon ex-femme… et ma meilleure amie !", "Qui est Tina pour Nicolas ?", "son ex-femme et sa meilleure amie", ["son ex-femme et sa meilleure amie","sa sœur","sa voisine"]),
+          ] },
+    ],
+    U5: [
+        { title: "🎧 L'entretien annuel de Marjorie (piste 45)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("Souvent sur des petits papiers, que je laisse sur les bureaux. — Pourriez-vous envisager d'écrire des mails dorénavant ?", "Comment Marjorie transmet-elle les informations ?", "sur des petits papiers", ["par mail","sur des petits papiers","par téléphone"]),
+            ask("On m'a rapporté que vous ne les regardiez pas dans les yeux. — C'est vrai que je suis très timide.", "Quel reproche lui fait-on avec le public ?", "elle ne regarde pas les gens dans les yeux", ["elle est en retard","elle ne regarde pas les gens dans les yeux","elle parle trop"]),
+            ask("Vous avez également réussi à bien maîtriser le logiciel. Et puis, vous êtes toujours aussi rigoureuse et autonome dans votre travail.", "Quel est un point positif ?", "elle est rigoureuse et autonome", ["elle est rigoureuse et autonome","elle est très sociable","elle aime la critique"]),
+            ask("Vous pourriez peut-être vous consacrer entièrement au travail de bureau pendant quelque temps.", "Que lui propose le directeur ?", "de faire du travail de bureau quelque temps", ["une augmentation","de faire du travail de bureau quelque temps","un licenciement"]),
+          ] },
+        { title: "🎧 Les problèmes au travail (piste 48)", instr: "🔊 Écoutez chaque témoignage et choisissez le problème.", type: "choice", shuffle: true, opts: ["la précarité","la monotonie","un manager toxique","un travail pénible et bruyant","la jalousie d'un collègue","un licenciement abusif","le manque de temps pour écouter","le salaire trop bas"],
+          items: [
+            ask("Je n'en peux plus d'enchaîner les petits contrats. C'est vraiment usant de ne jamais pouvoir faire de projets.", "Témoignage 1", "la précarité"),
+            ask("C'est un travail d'un ennui mortel. Faire la même tâche du matin au soir, c'est vraiment fatigant.", "Témoignage 2", "la monotonie"),
+            ask("Il nous fixait toujours des objectifs inatteignables. Il avait toujours besoin de sentir qu'il avait du pouvoir sur nous.", "Témoignage 3", "un manager toxique"),
+            ask("On travaille beaucoup dans des positions douloureuses. Ce qui est le plus usant, c'est de travailler dans un environnement bruyant.", "Témoignage 4", "un travail pénible et bruyant"),
+            ask("Mais petit à petit, ça a dégénéré. C'est devenu de la jalousie.", "Témoignage 5", "la jalousie d'un collègue"),
+            ask("Un jour, le PDG m'a convoquée dans son bureau. Il m'a fait comprendre que j'étais virée. J'ai fini par réaliser que c'était abusif.", "Témoignage 6", "un licenciement abusif"),
+            ask("Aujourd'hui, l'objectif est de traiter un maximum de dossiers. C'est plus possible de prendre le temps d'écouter les gens.", "Témoignage 7", "le manque de temps pour écouter"),
+            ask("J'aime mon taf, je m'épanouis dans ce que je fais. Mais je dois avouer que le salaire mensuel est assez ridicule.", "Témoignage 9", "le salaire trop bas"),
+          ] },
+        { title: "🎧 La série Enjoy (piste 49)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("Une série qui raconte l'histoire d'Abel, un étudiant brillant mais très précaire. Celui-ci est livreur à vélo chez Enjoy.", "Qui est Abel ?", "un étudiant livreur à vélo", ["un étudiant livreur à vélo","un avocat idéaliste","un journaliste"]),
+            ask("Leur seul « patron », c'est leur téléphone.", "Selon la série, qui est le « patron » des livreurs ?", "leur téléphone", ["leur téléphone","le réalisateur","un manager"]),
+            ask("Si vous livrez dix fois entre 12 h et 14 h, on vous donne cinq euros de plus.", "Que gagne-t-on en livrant dix fois entre 12 h et 14 h ?", "cinq euros de plus", ["cinq euros de plus","un jour de congé","rien"]),
+          ] },
+        { title: "🎧 Question ou affirmation ? (piste 52)", instr: "🔊 Écoutez l'intonation : la voix monte ou descend ?", type: "choice", opts: ["Question ?","Affirmation."],
+          items: [
+            { say: "Tu t'entends bien avec tes collègues ?", a: "Question ?" },
+            { say: "Le boss est là.", a: "Affirmation." },
+            { say: "La réunion a commencé ?", a: "Question ?" },
+            { say: "L'entretien s'est bien passé.", a: "Affirmation." },
+            { say: "Le boss est là ?", a: "Question ?" },
+            { say: "La réunion a commencé.", a: "Affirmation." },
+          ] },
+    ],
+    U6: [
+        { title: "🎧 Florent, photographe (piste 57)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("J'ai fait mes études à l'école des Beaux-Arts, mais je ne savais pas encore que je deviendrais photographe à cette époque. Je voulais devenir peintre !", "Que voulait devenir Florent ?", "peintre", ["peintre","architecte","musicien"]),
+            ask("L'année dernière, j'ai choisi la pellicule pour une série de photos sur la vie dans le Sahara marocain.", "Pour quel projet a-t-il choisi la pellicule ?", "une série sur le Sahara marocain", ["une série sur le Sahara marocain","un projet sur les étudiants","des portraits de famille"]),
+            ask("Je suis curieux des avancées technologiques toutefois, j'avoue que je n'ai pas encore intégré l'IA générative dans mon processus créatif.", "Utilise-t-il l'IA générative ?", "pas encore", ["oui, tous les jours","pas encore","il est contre"]),
+            ask("Il y a une dizaine d'années, j'ai perdu beaucoup de photos à cause d'une carte mémoire de mauvaise qualité.", "Pourquoi a-t-il perdu des photos ?", "à cause d'une carte mémoire de mauvaise qualité", ["à cause d'une carte mémoire de mauvaise qualité","à cause d'un vol","à cause d'un incendie"]),
+          ] },
+        { title: "🎧 Vasarely et Duchamp (pistes 58 et 59)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("C'est en observant des galets sur une plage de Belle-Île-en-Mer, à la fin des années 40, que Vasarely a eu une révélation.", "D'où vient la révélation de Vasarely ?", "des galets sur une plage de Belle-Île-en-Mer", ["des galets sur une plage de Belle-Île-en-Mer","d'un voyage à New York","d'un tableau de Manet"]),
+            ask("On retrouve ses motifs dans le célèbre logo de la marque Renault, qu'il redessine en 1972.", "Quel logo a-t-il redessiné ?", "celui de Renault", ["celui de Renault","celui de Peugeot","celui de la SNCF"]),
+            ask("Imaginez : on est en 1917, un artiste choisit un objet industriel, l'expose et dit : « C'est une œuvre d'art ! ». Et en plus, l'objet en question est un urinoir !", "En quelle année Duchamp a-t-il présenté Fontaine ?", "en 1917", ["en 1895","en 1917","en 1969"]),
+            ask("Ces copies sont aujourd'hui exposées dans de grands musées, par exemple, au Centre Pompidou à Paris ou au MoMA à New York.", "Où sont exposées des répliques de Fontaine ?", "au Centre Pompidou et au MoMA", ["au Centre Pompidou et au MoMA","au Louvre","nulle part"]),
+          ] },
+        { title: "🎧 L'enquête (piste 60)", instr: "🔊 Écoutez les témoins et répondez.", type: "choice",
+          items: [
+            ask("J'ai vu une femme, la victime j'imagine. Une très belle femme, blonde, avec un tailleur rouge magnifique.", "Comment était la femme ?", "blonde, en tailleur rouge", ["blonde, en tailleur rouge","brune, en jean","rousse, en robe noire"]),
+            ask("Un monsieur très mince, un peu maigre même. Il était blond lui aussi, avec une petite barbe bien taillée. Il portait un grand manteau noir.", "Comment était l'homme qui l'accompagnait ?", "mince, blond, en manteau noir", ["mince, blond, en manteau noir","grand, musclé et chauve","petit et roux"]),
+            ask("Tout de suite après, j'ai vu un autre homme arriver en courant. Il a profité que la porte ne s'était pas complètement refermée pour entrer dans l'immeuble. Et à peine une minute plus tard, j'ai entendu les deux coups de feu.", "Qui est entré dans l'immeuble juste avant les coups de feu ?", "un autre homme, arrivé en courant", ["un autre homme, arrivé en courant","le mari de la victime","le boulanger"]),
+            ask("Oh, c'était un très grand bonhomme, musclé. Chauve avec une veste à carreaux.", "Comment était cet homme ?", "très grand, musclé, chauve, veste à carreaux", ["très grand, musclé, chauve, veste à carreaux","mince et blond","petit et barbu"]),
+            ask("Le conducteur de la camionnette ? Oh, lui, il était costaud, pour sûr ! Un type immense. Un jean et une veste à carreaux, je crois.", "Qui est donc le suspect le plus probable ?", "le conducteur de la camionnette", ["le conducteur de la camionnette","l'homme au manteau noir","le propriétaire de la station-service"]),
+          ] },
+        { title: "🎧 Avis positif ou négatif ? (piste 61)", instr: "🔊 Écoutez l'avis sur l'œuvre.", type: "choice", shuffle: true, opts: ["Avis positif","Avis négatif"],
+          items: [
+            ask("Regarde le contraste entre l'ombre et la lumière, le jeu sur la perspective, c'est stupéfiant !", "Avis 1", "Avis positif"),
+            ask("L'intrigue est aussi complexe que captivante et l'écriture est limpide. J'ai adoré.", "Avis 2", "Avis positif"),
+            ask("J'ai trouvé ça nul, la mise en scène est médiocre, il n'y a pas de point de vue.", "Avis 3", "Avis négatif"),
+            ask("Je n'ai vraiment pas accroché. L'histoire est inspirée d'un fait divers mais c'est ennuyant !", "Avis 4", "Avis négatif"),
+            ask("On a l'impression d'être transporté dans un univers sonore poétique et enveloppant.", "Avis 5", "Avis positif"),
+            ask("La scène est terrible et réaliste mais ça ne me choque pas. Cette toile ne me fait rien du tout.", "Avis 7", "Avis négatif"),
+            ask("J'adore cette compositrice ! Ses rythmes sont captivants et son travail sur le son est très précis.", "Avis 10", "Avis positif"),
+          ] },
+    ],
+    U7: [
+        { title: "🎧 Les erreurs de français (piste 69)", instr: "🔊 Écoutez chaque dialogue : quelle est la difficulté ?", type: "choice", shuffle: true, opts: ["tutoiement / vouvoiement","le genre des noms","les lettres qui ne se prononcent pas","l'accord du participe","des mots qui se prononcent pareil"],
+          items: [
+            ask("Madame, Madame, excusez-moi, tu peux ouvrir la porte ? — Oui, mais attention, dites plutôt « pouvez-vous ».", "Dialogue 1", "tutoiement / vouvoiement"),
+            ask("Je mets le robe bleue et le veste noire. — Tu sais, robe et veste en français, c'est féminin.", "Dialogue 2", "le genre des noms"),
+            ask("J'ai mal partout, au dos, à l'estomac. — N'oublie pas que beaucoup de lettres ne se prononcent pas à la fin des mots.", "Dialogue 3", "les lettres qui ne se prononcent pas"),
+            ask("J'ai enfin reçu la carte que tu as écrit. — « écriTE » parce que « carte », c'est féminin.", "Dialogue 4", "l'accord du participe"),
+            ask("La maire habite au bord de la mère. — Ta maman, c'est ta « mère » avec un accent grave. Mais la plage, c'est la « mer ».", "Dialogue 6", "des mots qui se prononcent pareil"),
+          ] },
+        { title: "🎧 L'orthographe, un casse-tête (piste 70)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("Au XVIIe siècle, l'Académie française a voulu créer une orthographe savante, qui affiche l'étymologie des mots qui viennent du grec et du latin.", "Qui a voulu une orthographe savante au XVIIe siècle ?", "l'Académie française", ["l'Académie française","le roi","les imprimeurs"]),
+            ask("On écrit philosophie avec ph, alors que d'autres langues comme l'italien ou l'espagnol utilisent simplement un f.", "Quel exemple montre l'étymologie grecque ?", "philosophie avec ph", ["philosophie avec ph","oignon","poids"]),
+            ask("À l'époque, cette écriture complexe permettait surtout de faire la différence entre les gens instruits et ceux qui ne l'étaient pas.", "À quoi servait cette écriture complexe ?", "distinguer les gens instruits des autres", ["distinguer les gens instruits des autres","écrire plus vite","imiter l'anglais"]),
+            ask("Au début du XXe siècle, le ministre de l'Instruction publique avait proposé de simplifier tout ça, en rendant l'accord facultatif avec le verbe avoir. Mais cette idée a fait scandale.", "Qu'a proposé le ministre au début du XXe siècle ?", "rendre facultatif l'accord avec avoir", ["rendre facultatif l'accord avec avoir","supprimer les accents","interdire le subjonctif"]),
+          ] },
+    ],
+    };
+    LESSONS.forEach(l => l.ex.push(...(EXTRA[l.id] || [])));
 
     LESSONS.forEach(l => Object.assign(l, UNITS.find(u => u.id === l.id)));
 
