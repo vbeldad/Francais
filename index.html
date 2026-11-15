@@ -2026,6 +2026,107 @@
           ] },
     ],
     };
+    EXTRA.U7.push(
+        { title: "🎧 Le chatbot en classe (piste 72)", instr: "🔊 Écoutez : qui dit cela, Célia (pour) ou Arthur (contre) ?", type: "choice", shuffle: true, opts: ["Célia","Arthur"],
+          items: [
+            ask("Je considère que les chatbots leur permettent de pratiquer la langue quand ils veulent et autant qu'ils veulent, même en dehors des cours.", "Les chatbots permettent de pratiquer quand on veut.", "Célia"),
+            ask("Une vraie conversation, c'est aussi sentir le regard de l'autre, comprendre ses intonations, ses mimiques et ses gestes. Une machine, ça ne fait pas tout cela.", "Une machine ne comprend pas le non-verbal.", "Arthur"),
+            ask("Prenons l'exemple des élèves timides, ceux qui ne s'expriment presque jamais. En utilisant un chatbot, ils peuvent pratiquer et gagner en confiance.", "Le chatbot aide les élèves timides.", "Célia"),
+            ask("Certains élèves risquent de se contenter de réponses toutes faites, copier des phrases sans réfléchir et ne jamais développer leur autonomie.", "Les élèves risquent de copier sans réfléchir.", "Arthur"),
+            ask("Je préfère les voir échanger entre eux, rire de leurs maladresses, improviser des dialogues, apprendre ensemble.", "Il préfère que les élèves échangent entre eux.", "Arthur"),
+            ask("Le chatbot ne remplace pas le cours ; il prolonge la pratique. Refuser cet outil serait un vrai gâchis.", "Refuser cet outil serait un gâchis.", "Célia"),
+          ] },
+        { title: "🎧 Registre familier ou pas ? (piste 73)", instr: "🔊 Écoutez la phrase : registre familier, ou courant / soutenu ?", type: "choice", opts: ["Familier","Courant ou soutenu"],
+          items: [
+            ask("Je m'en balek de cette histoire d'amour !", "Phrase 1", "Familier"),
+            ask("Pourriez-vous m'indiquer où se trouve la mairie, s'il vous plaît ?", "Phrase 2", "Courant ou soutenu"),
+            ask("Ce roman, c'est l'histoire d'une reum qui kiffe trop un gars, c'est un gros banger.", "Phrase 3", "Familier"),
+            ask("Je vous prie de m'excuser pour le désagrément. Cela ne se reproduira plus.", "Phrase 5", "Courant ou soutenu"),
+            ask("Mon exam du permis de conduire ? C'est passé crème, j'ai réussi du premier coup !", "Phrase 8", "Familier"),
+            ask("Monsieur, je me permets de vous faire remarquer que vous êtes une nouvelle fois en retard. C'est inadmissible.", "Phrase 9", "Courant ou soutenu"),
+          ] },
+        { title: "🎧 La glottophobie (piste 75)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("Depuis 2001, la loi française interdit plusieurs formes de discrimination. Mais les discriminations linguistiques n'y ont été ajoutées qu'en 2016.", "Depuis quand la loi interdit-elle les discriminations linguistiques ?", "2016", ["2001","2016","2023"]),
+            ask("La glottophobie, c'est-à-dire la discrimination liée à la façon de parler, n'est pas seulement tolérée, mais parfois même institutionnalisée.", "Qu'est-ce que la glottophobie ?", "la discrimination liée à la façon de parler", ["la discrimination liée à la façon de parler","la peur des langues étrangères","une maladie de la voix"]),
+            ask("Le français standard, celui de Paris, reste considéré comme la « bonne » manière de parler.", "Quel français est considéré comme la « bonne » manière de parler ?", "celui de Paris", ["celui de Paris","celui de Marseille","celui du Québec"]),
+          ] },
+        { title: "🎧 [i], [y] ou [u] ? (piste 79)", instr: "🔊 Écoutez et choisissez le mot que vous entendez.", type: "choice", shuffle: true,
+          items: [
+            { say: "lu", a: "lu", opts: ["lit","lu","loup"] },
+            { say: "bouche", a: "bouche", opts: ["bûche","bouche","biche"] },
+            { say: "mis", a: "mis", opts: ["mou","mue","mis"] },
+            { say: "dit", a: "dit", opts: ["dû","dit","doux"] },
+            { say: "pue", a: "pue", opts: ["pou","pis","pue"] },
+            { say: "vous", a: "vous", opts: ["vue","vie","vous"] },
+            { say: "su", a: "su", opts: ["su","sous","si"] },
+            { say: "boule", a: "boule", opts: ["bile","boule","bulle"] },
+            { say: "jus", a: "jus", opts: ["joue","jus","gît"] },
+            { say: "pile", a: "pile", opts: ["pull","poule","pile"] },
+          ] }
+    );
+    EXTRA.U8 = [
+        { title: "🎧 Barbie (pistes 82 et 83)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("Je viens de fêter mes 66 ans mais je ne vieillis pas, j'en parais 20 !", "Quel âge fête Barbie ?", "66 ans", ["20 ans","50 ans","66 ans"]),
+            ask("À ce jour, j'ai exercé plus de 250 métiers. J'ai, par exemple, été astronaute et présidente des États-Unis.", "Combien de métiers a-t-elle exercés ?", "plus de 250", ["25","plus de 250","plus de 1 000"]),
+            ask("Je suis grande, mince, et blonde, je mesure 29 cm et mon sourire ne me quitte jamais.", "Combien mesure-t-elle ?", "29 cm", ["19 cm","29 cm","39 cm"]),
+            ask("Ce qui a été décisif, c'est la sortie du film Barbie en 2023 qui a fait un carton et qui a considérablement boosté les ventes !", "Qu'est-ce qui a relancé les ventes ?", "le film Barbie en 2023", ["le film Barbie en 2023","une baisse des prix","une publicité à la télévision"]),
+            ask("Il a fallu attendre 1991 pour avoir une poupée noire aux cheveux crépus !", "En quelle année est sortie la première poupée noire aux cheveux crépus ?", "1991", ["1968","1991","2016"]),
+            ask("1998 avec la première barbie en fauteuil roulant, 2016 avec la première barbie ronde, et enfin 2024 avec une barbie non-voyante qui se déplace avec une canne blanche.", "Quelle Barbie est sortie en 2024 ?", "une Barbie non-voyante", ["une Barbie ronde","une Barbie en fauteuil roulant","une Barbie non-voyante"]),
+            ask("92 % des petites filles américaines possèdent une Barbie. Est-ce que la plupart des Américaines sont anorexiques ? Non.", "Que pense Charlotte de l'influence de Barbie ?", "elle reste sceptique", ["elle reste sceptique","Barbie est très dangereuse","il faut l'interdire"]),
+          ] },
+        { title: "🎧 Crokinole et Tock (piste 84)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("On y joue sur une planche en bois, ronde de plus ou moins 80 centimètres de diamètre et avec 24 palets.", "Avec combien de palets joue-t-on au Crokinole ?", "24", ["12","24","54"]),
+            ask("On compte alors les points : 20 points pour les palets tombés dans le trou.", "Combien de points pour un palet dans le trou ?", "20", ["5","15","20"]),
+            ask("On joue au Tock. On y joue avec un plateau sur lequel il y a des cases qui tracent un parcours et avec 54 cartes. Chaque joueur dispose de 4 pions.", "Combien de pions a chaque joueur au Tock ?", "4", ["4","5","6"]),
+            ask("Avec une carte roi, on avance de 13 cases et en plus, on peut manger tous les pions qu'il y a sur notre route.", "Avec la carte roi, on avance de…", "13 cases", ["4 cases","11 cases","13 cases"]),
+            ask("La carte 4, elle, oblige à reculer de 4 cases.", "Que fait la carte 4 ?", "elle oblige à reculer de 4 cases", ["elle oblige à reculer de 4 cases","elle fait avancer de 4 cases","elle fait passer son tour"]),
+          ] },
+        { title: "🎧 Léo et la gamification (piste 86)", instr: "🔊 Écoutez. Vrai ou faux ?", type: "choice", opts: VF,
+          items: [
+            ask("Pff, c'est n'importe quoi, ça. Ton patron ferait mieux d'améliorer vos conditions de travail.", "Le père trouve la gamification très sympa.", "Faux"),
+            ask("Quand je remporte un défi, je gagne des points et quand j'en cumule assez, je peux les échanger contre des cadeaux.", "Léo peut échanger ses points contre des cadeaux.", "Vrai"),
+            ask("Moi, je travaille toute la journée avec des cartons. Je les porte, je les déplace, je les range.", "Léo travaille avec des cartons.", "Vrai"),
+            ask("J'ai juste très peur que le patron vous mette en compétition toi et tes collègues et que ça crée une très mauvaise ambiance.", "Le père a peur d'une mauvaise ambiance entre collègues.", "Vrai"),
+          ] },
+        { title: "🎧 Les bienfaits de l'ennui (pistes 87 et 88)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("Avant de publier Buller malin aux éditions Eyrolles, la coach Émilie Devienne a récolté les réactions de son entourage.", "Comment s'appelle le livre d'Émilie Devienne ?", "Buller malin", ["Buller malin","L'ennui, c'est la vie","Ne rien faire"]),
+            ask("Ne rien faire c'est un choix alors que l'ennui c'est un état qui s'impose à vous, une baisse de motivation.", "Quelle différence entre ne rien faire et s'ennuyer ?", "ne rien faire est un choix, l'ennui s'impose à nous", ["ne rien faire est un choix, l'ennui s'impose à nous","c'est la même chose","l'ennui est toujours une dépression"]),
+            ask("Cet état doit être passager, sinon là on peut parler de dépression.", "Si l'ennui n'est pas passager, on peut parler de…", "dépression", ["paresse","dépression","créativité"]),
+            ask("L'ennui n'a pas forcément un pouvoir de nuisance, ça peut être un pouvoir d'alerte.", "Selon Edwige, l'ennui peut être…", "un pouvoir d'alerte", ["un pouvoir d'alerte","une perte de temps","une maladie"]),
+            ask("Message personnel à toi Yanis, mon fils que j'adore : si tu pouvais devenir un bon perdant, ça serait tellement plus sympa le week-end.", "Que souhaite le père de Yanis ?", "qu'il devienne un bon perdant", ["qu'il devienne un bon perdant","qu'il gagne plus souvent","qu'il joue moins"]),
+          ] },
+    ];
+    EXTRA.U9 = [
+        { title: "🎧 Pierre, créateur de mèmes (piste 94)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("Ce matin, votre invité a 31 ans et il fait rire tout Internet.", "Quel âge a Pierre ?", "31 ans", ["21 ans","31 ans","41 ans"]),
+            ask("Quand j'étais encore étudiant en école de commerce, j'ai créé un groupe Facebook qui s'appelait Collectionneurs de mèmes.", "Comment a-t-il commencé ?", "avec un groupe Facebook, Collectionneurs de mèmes", ["avec un groupe Facebook, Collectionneurs de mèmes","à la télévision","dans un comedy club"]),
+            ask("Vous avez aujourd'hui près de 600 000 abonnés, c'est énorme ! Et vous publiez jusqu'à dix mèmes par jour.", "Combien d'abonnés a-t-il ?", "près de 600 000", ["près de 60 000","près de 600 000","6 millions"]),
+            ask("D'abord, je choisis une image ou une vidéo qui m'inspire. L'important, c'est que les gens reconnaissent la référence. Ensuite, j'ajoute un petit texte pour détourner le sens de l'image.", "Le plus important pour un mème, c'est que…", "les gens reconnaissent la référence", ["les gens reconnaissent la référence","l'image soit belle","le texte soit long"]),
+            ask("J'essaie toujours de rester dans le second degré. Mon but, c'est de faire sourire, pas de provoquer.", "Quel est son but ?", "faire sourire, pas provoquer", ["faire sourire, pas provoquer","choquer","gagner de l'argent"]),
+          ] },
+        { title: "🎧 L'histoire du stand-up (piste 96)", instr: "🔊 Écoutez et répondez.", type: "choice",
+          items: [
+            ask("En France, il s'est imposé en 2006 et son succès a été quasi immédiat.", "Quand le stand-up s'est-il imposé en France ?", "en 2006", ["en 1950","en 1990","en 2006"]),
+            ask("Tout commence au XIXe siècle, dans des spectacles où des comédiens blancs proposent un mélange de sketchs humoristiques et d'imitations stéréotypées.", "Quand commence l'histoire du stand-up ?", "au XIXe siècle", ["au XVIIe siècle","au XIXe siècle","en 2006"]),
+            ask("Peu à peu, les artistes s'installent dans des clubs et des bars, souvent tenus par la mafia.", "Qui tenait souvent les clubs et les bars ?", "la mafia", ["la mafia","l'État","les artistes"]),
+            ask("Dans les années 1950, les humoristes critiquent plus ouvertement la société américaine et utilisent le rire pour dénoncer des injustices sociales.", "Que change-t-il dans les années 1950 ?", "les humoristes critiquent la société", ["les humoristes critiquent la société","le stand-up arrive en France","les spectacles deviennent itinérants"]),
+            ask("Ce changement de ton annonce l'arrivée officielle du stand-up en France, en 2006, avec l'émission télévisée Jamel Comedy Club.", "Quelle émission a lancé le stand-up en France ?", "le Jamel Comedy Club", ["le Jamel Comedy Club","Les nouveaux esprits","Le Grand Journal"]),
+          ] },
+        { title: "🎧 Des fous rires (piste 98)", instr: "🔊 Écoutez le témoignage : où cela s'est-il passé ?", type: "choice", shuffle: true, opts: ["en réunion","à un enterrement","dans le métro","à un cours de yoga","à la maison","à une soirée entre amis"],
+          items: [
+            ask("Notre chef faisait une présentation super sérieuse… mais il avait une grosse tache de café sur sa chemise.", "Personne 1", "en réunion"),
+            ask("Un ami a éternué super fort, et le bruit a résonné dans toute l'église. Impossible de me retenir.", "Personne 2", "à un enterrement"),
+            ask("Je suis tombé sur une vidéo d'un chien déguisé en super-héros. J'ai ri d'un coup, très fort, au milieu du wagon.", "Personne 3", "dans le métro"),
+            ask("Pendant qu'on faisait la position du chien tête en bas, son pantalon a craqué !", "Personne 4", "à un cours de yoga"),
+            ask("Mon père a dit à ma sœur : « J'ai vendu ta voiture ce matin, elle prenait trop de place devant la maison. » Puis : « Je plaisante. »", "Personne 5", "à la maison"),
+            ask("L'un d'eux a sorti une vieille photo de moi au lycée, avec une coupe de cheveux vraiment horrible !", "Personne 6", "à une soirée entre amis"),
+          ] },
+    ];
     LESSONS.forEach(l => l.ex.push(...(EXTRA[l.id] || [])));
 
     LESSONS.forEach(l => Object.assign(l, UNITS.find(u => u.id === l.id)));
